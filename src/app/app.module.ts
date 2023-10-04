@@ -11,9 +11,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { FormsModule } from '@angular/forms';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, DashboardComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

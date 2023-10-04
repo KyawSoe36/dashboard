@@ -1,8 +1,12 @@
 <mat-sidenav-container>
   <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
 
-    <h1 class="name">W</h1>
+    <h1 class="logo">W</h1>
     <p class="designation">Wallet</p>
+
+    <ul>
+      <li><a routerLink="/dashboard">DashBoard</a></li>
+    </ul>
 
     <button mat-button class="menu-button" routerLink="/home">
       <mat-icon>home</mat-icon>
@@ -54,4 +58,7 @@
 
   </mat-sidenav>
 
+  <div class="router-container">
+    <router-outlet></router-outlet>
+  </div>
 </mat-sidenav-container>
