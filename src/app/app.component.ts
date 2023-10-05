@@ -17,7 +17,7 @@ export class AppComponent {
 
   isChecked = false;
 
-  constructor(private observer: BreakpointObserver, private router: Router) {}
+  constructor(private observer: BreakpointObserver, private router: Router) { }
 
   ngAfterViewInit() {
     this.observer
