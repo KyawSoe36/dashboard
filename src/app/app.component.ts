@@ -4,6 +4,9 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { delay, filter } from 'rxjs/operators';
 import { NavigationEnd, Router } from '@angular/router';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
+import { MatIconRegistry } from "@angular/material/icon";
+import { DomSanitizer } from "@angular/platform-browser";
+
 
 @UntilDestroy()
 @Component({
@@ -17,7 +20,16 @@ export class AppComponent {
 
   isChecked = false;
 
-  constructor(private observer: BreakpointObserver, private router: Router) { }
+
+  constructor(private observer: BreakpointObserver, private router: Router,
+    private matIconRegistry: MatIconRegistry,
+    private domSanitizer: DomSanitizer
+  ) {
+    this.matIconRegistry.addSvgIcon(
+      "arrow-down-right",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/arrow-down-right.svg")
+    );
+   }
 
   ngAfterViewInit() {
     this.observer
