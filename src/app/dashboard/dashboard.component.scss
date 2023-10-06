@@ -4,6 +4,48 @@
         display: inline;
     }
 
+    .search-container {
+        position: relative;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        overflow: hidden;
+        padding:5px;
+        margin-right: 15px;
+        width:280px;
+      }
+      
+      .left-icon,
+      .right-left-icon,
+      .right-icon {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+      
+      .left-icon {
+        left: 10px;
+      }
+      
+      .right-icon {
+        right: 10px;
+      }
+
+      .right-left-icon{
+        right: 35px;
+      }
+      
+      input[type="search"] {
+        padding-left: 30px; 
+        padding-right: 30px;
+        background:inherit;
+        border: none;
+        width: 100%;
+        outline: none;
+      }
+      
+
     .container {
         margin: 10px;
     }
