@@ -1,68 +1,100 @@
-mat-sidenav-container {
+$main-content-background:#310E68;
+$hover-color-background:linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
+$font-size: 16px;
+
+.mat-sidenav-container {
   height: calc(100vh);
 }
 
-mat-sidenav {
-    width: 200px;
-    border-right: none;
-    background: #3C0949;
-    color: white;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    padding: 16px;
-    text-align: center;
-  }
-  
-  .content {
-    height: calc(100vh - 130px);
-    border-radius: 10px;
-    margin: 16px;
-    margin-left: 0px;
-    padding: 16px;
-    overflow: auto;
-  }
-  
-  .menu-button {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    font-size: 1rem;
-  
-    mat-icon {
-      margin-right: 8px;
-    }
-  }
-  
-  .logo {
-    margin-top: 8px;
-    font-weight: normal;
-  }
-  
-  .designation {
-    margin-top: 2px;
-    font-size: 0.7rem;
-    color: lightgrey;
-  }
-  
-  mat-divider {
-    margin-top: 16px;
-    margin-bottom: 16px;
-    background-color: rgba(255, 255, 255, 0.5);
-  }
+.mat-sidenav {
+  width: 220px;
+  border-right: none;
+  background: #3C0949;
+  color: white;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  text-align: center;
 
   mat-slide-toggle {   
+    margin-left:20px;
     position: absolute;
     display: flex;
     bottom: 50px;
   }
 
-  .white-text {
-    color: rgb(255, 255, 255);
+}
+
+.menu-list {
+  width: 220px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  transition: background-color 0.2s;
+  display: flex;
+  width: 220px;
+  text-align: center;
+  padding:10px 10px 10px 20px;
+
+  mat-icon{
+    margin-right:10px;
   }
 
-  .router-container {
-    padding: 25px;
-    background-color: #f0f0f0;
-    height: calc(100vh);
-  }
+}
+
+
+
+.menu-item:hover {
+
+  background-color: #555;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+.menu-item a.active {
+  font-weight: bold;
+
+}
+
+.active {
+  background: $hover-color-background;
+}
+
+.logo {
+  margin-top: 8px;
+  font-weight: normal;
+}
+
+.designation {
+  margin-top: 2px;
+  font-size: 0.7rem;
+  color: lightgrey;
+}
+
+.mat-divider {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.mat-slide-toggle {   
+  position: absolute;
+  display: flex;
+  bottom: 50px;
+}
+
+.white-text {
+  color: rgb(255, 255, 255);
+}
+
+.main-content {
+  padding: 25px;
+  background-color: $main-content-background;
+  height: calc(100vh);
+}

@@ -4,53 +4,60 @@
     <h1 class="logo">W</h1>
     <p class="designation">Wallet</p>
 
-    <ul>
-      <li><a routerLink="/dashboard">DashBoard</a></li>
-    </ul>
+    <ul class="menu-list">
+      <li [routerLinkActive]="['active']" class="menu-item">
+        <mat-icon class="icon-content-space">info</mat-icon>
+        <a routerLink="/dashboard" >DashBoard</a>
+      </li>
 
-    <button mat-button class="menu-button" routerLink="/home">
-      <mat-icon>home</mat-icon>
-      <span class="white-text">DashBoard</span>
-    </button>
-    <button mat-button class="menu-button" routerLink="/profile">
-      <mat-icon>person</mat-icon>
-      <span class="white-text">Wallet</span>
-    </button>
-    <button mat-button class="menu-button" routerLink="/about">
-      <mat-icon>info</mat-icon>
-      <span class="white-text">Transaction</span>
-    </button>
-    <button mat-button class="menu-button " routerLink="/about">
-      <mat-icon>info</mat-icon>
-      <span class="white-text">Cashback</span>
-    </button>
-    <button mat-button class="menu-button" routerLink="/about">
-      <mat-icon>info</mat-icon>
-      <span class="white-text">Payments</span>
-    </button>
-    <button mat-button class="menu-button" routerLink="/about">
-      <mat-icon>info</mat-icon>
-      <span class="white-text">Investments</span>
-    </button>
-    <button mat-button class="menu-button" routerLink="/about">
-      <mat-icon>info</mat-icon>
-      <span class="white-text">Profile</span>
-    </button>
-    <button mat-button class="menu-button" routerLink="/about">
-      <mat-icon>info</mat-icon>
-      <span class="white-text">Support</span>
-    </button>
+      <li class="menu-item">
+        <mat-icon>info</mat-icon>
+        <a routerLink="/wallet" routerLinkActive="active">Wallet</a>
+      </li>
+
+      <li class="menu-item">
+        <mat-icon>info</mat-icon>
+        <a routerLink="/transaction" routerLinkActive="active">Transaction</a>
+      </li>
+
+      <li class="menu-item">
+        <mat-icon>info</mat-icon>
+        <a routerLink="/cashback" routerLinkActive="active">Cashback</a>
+      </li>
+
+      <li class="menu-item">
+        <mat-icon>info</mat-icon>
+        <a routerLink="/payments" routerLinkActive="active">Payments</a>
+      </li>
+
+      <li class="menu-item">
+        <mat-icon>info</mat-icon>
+        <a routerLink="/investments" routerLinkActive="active">Investments</a>
+      </li>
+
+      <li class="menu-item">
+        <mat-icon>info</mat-icon>
+        <a routerLink="/profile" routerLinkActive="active">Profile</a>
+      </li>
+
+      <li class="menu-item">
+        <mat-icon>info</mat-icon>
+        <a routerLink="/support" routerLinkActive="active">Support</a>
+      </li>
+
+    </ul>
 
     <mat-divider></mat-divider>
 
-    <button mat-button class="menu-button" routerLink="/help">
-      <mat-icon>help</mat-icon>
-      <span class="white-text">Setting</span>
-    </button>
-    <button mat-button class="menu-button" routerLink="/help">
-      <mat-icon>help</mat-icon>
-      <span class="white-text">Logout</span>
-    </button>
+    <li [routerLinkActive]="['active']" class="menu-item">
+        <mat-icon class="icon-content-space">info</mat-icon>
+        <a routerLink="/setting" >Setting</a>
+      </li>
+
+      <li [routerLinkActive]="['active']" class="menu-item">
+          <mat-icon class="icon-content-space">info</mat-icon>
+          <a routerLink="/logout" >Logout</a>
+        </li>
 
     <mat-slide-toggle [(ngModel)]="isChecked">
       <span class="white-text">switch to light</span>
@@ -58,7 +65,7 @@
 
   </mat-sidenav>
 
-  <div class="router-container">
+  <div class="main-content">
     <router-outlet></router-outlet>
   </div>
 </mat-sidenav-container>
