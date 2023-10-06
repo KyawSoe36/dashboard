@@ -23,6 +23,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 
+
 @NgModule({
   declarations: [AppComponent, DashboardComponent],
   imports: [
@@ -41,8 +42,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     NgApexchartsModule,
     MatMenuModule,
     MatSortModule,
+    MatTableModule,
     MatTooltipModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatButtonToggleModule
 
   ],
   providers: [],
