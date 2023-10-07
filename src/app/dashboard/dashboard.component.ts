@@ -5,6 +5,7 @@ import { Analytics } from '../shared/dashboard';
 import { finance } from '../shared/finance';
 import { investmentConst } from '../shared/investment';
 import { transaction } from '../shared/transactions';
+import { quickTransfers } from '../shared/quick_transfers';
 import { ApexOptions } from 'ng-apexcharts';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -47,6 +48,7 @@ export class DashboardComponent implements OnInit {
   donutChartOptions: any;
   lineChartOptions: any;
   transaction: any;
+  quickTransfers: any;
 
   // ::TODO finance value for the bugetGraph data
 
@@ -58,6 +60,7 @@ export class DashboardComponent implements OnInit {
     this.data = Analytics;
     this.investment = investmentConst;
     this.transaction = transaction;
+    this.quickTransfers = quickTransfers;
 
     console.log("Investment value", this.investment);
 
