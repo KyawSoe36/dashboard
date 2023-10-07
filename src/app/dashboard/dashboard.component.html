@@ -21,10 +21,10 @@
 
     <div class="main-content">
 
-        <div class="container flex flex-wrap">
+        <div class="container flex flex-wrap m-6">
 
             <!-- Start conversion to income-->
-            <div class="justify-between flex-auto bg-card shadow rounded-2xl overflow-hidden">
+            <div class="card-design;">
                 <div class="flex items-start justify-between m-6 mb-0">
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">Income</div>
                     <div class="ml-2">
@@ -243,10 +243,12 @@
             <div class="flex flex-col sm:flex-row items-start justify-between">
                 <div class="text-lg font-medium tracking-tight leading-6 truncate">Investment</div>
                 <div class="mt-3 sm:mt-0 sm:ml-2">
-                    <mat-button-toggle-group value="today" #scheduleDaySelector="matButtonToggleGroup">
+
+                    <!-- TODO::ADD OPTION BUTTON -->
+                    <!-- <mat-button-toggle-group value="today" #scheduleDaySelector="matButtonToggleGroup">
                         <mat-button-toggle value="today">Today</mat-button-toggle>
                         <mat-button-toggle value="tomorrow">Tomorrow</mat-button-toggle>
-                    </mat-button-toggle-group>
+                    </mat-button-toggle-group> -->
                 </div>
             </div>
             <div class="flex flex-col mt-2 divide-y">
@@ -331,7 +333,7 @@
             <div class="flex items-center">
                 <div class="flex flex-col">
                     <div class="mr-4 text-lg font-medium tracking-tight leading-6 truncate">Goals</div>
-                    <div class="text-secondary font-medium">Monthly budget summary</div>
+                    
                 </div>
                 <div class="ml-auto -mt-2 -mr-2">
                     <button mat-icon-button [matMenuTriggerFor]="budgetMenu">
@@ -356,12 +358,6 @@
                         </button>
                     </mat-menu>
                 </div>
-            </div>
-            <div class="mt-6">
-                Last month; you had
-                <strong>223</strong> expense transactions,
-                <strong>12</strong> savings entries and
-                <strong>4</strong> bills.
             </div>
             <div class="my-8 space-y-8">
                 <div class="flex flex-col">
@@ -411,7 +407,6 @@
                             <mat-icon class="text-red-600 icon-size-4 ml-1" [svgIcon]="'heroicons_solid:arrow-narrow-up'"></mat-icon>
                         </div>
                     </div>
-                    <div class="mt-3 text-md text-secondary">Exceeded your personal limit! Be careful next month.</div>
                 </div>
             </div>
         </div>
