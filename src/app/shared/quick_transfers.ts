@@ -6,37 +6,19 @@ export const quickTransfers = {
     schedule          : {
         today   : [
             {
-                title   : 'Group Meeting',
-                time    : 'in 32 minutes',
-                location: 'Conference room 1B'
+                name   : 'Alexander Abramson',
+                value    : '***1676',
             },
             {
-                title   : 'Dinner with David',
-                time    : '05:30 PM',
-                location: 'Magnolia'
+                name   : 'Julier Davidson',
+                value    : '**2675',
             },
             {
-                title   : 'Jane\'s Birthday Party',
-                time    : '07:30 PM',
-                location: 'Home'
+                name   : 'Andrew Evans',
+                value    : '***0987',
             },
         ],
-        tomorrow: [
-            {
-                title   : 'Marketing Meeting',
-                time    : '09:00 AM',
-                location: 'Conference room 1A'
-            },
-            {
-                title: 'Live Stream',
-                time : '05:30 PM'
-            },
-            {
-                title   : 'Release Party',
-                time    : '07:30 PM',
-                location: 'CEO\'s house'
-            }
-        ]
+       
     },
   
 };

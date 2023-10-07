@@ -274,6 +274,12 @@ export class DashboardComponent implements OnInit {
   trackByFn(index: number, item: any): any {
     return item.id || index;
   }
+  
+  getAvatarText(user :any) {
+    if(!user) return '?';
+    console.log("Get avalater tesst",user.charAt(0));
+    return user.charAt(0) ;
+  }
 
   ngOnInit() {
 

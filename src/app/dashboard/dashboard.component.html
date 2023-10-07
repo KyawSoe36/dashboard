@@ -186,30 +186,28 @@
             <div class="sm:col-span-2 md:col-span-4 lg:col-span-2 flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
                 <div class="flex flex-col sm:flex-row items-start justify-between">
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">Quick transfers</div>
-                   
+
                 </div>
-                <div class="flex flex-col mt-2 divide-y">
+                <div class="flex flex-col divide-y">
                     <ng-container *ngFor="let scheduleItem of quickTransfers.schedule['today']; trackBy: trackByFn">
                         <div class="flex flex-row items-center justify-between py-4 px-0.5">
+                            <div class=" avatar-text  ">
+                               <div class="text-center"> {{getAvatarText(scheduleItem.name)}}</div>
+                            </div>
                             <div class="flex flex-col">
-                                <div class="font-medium">{{scheduleItem.title}}</div>
+                                <div class="font-medium">{{scheduleItem.name}}</div>
                                 <div class="flex flex-col sm:flex-row sm:items-center -ml-0.5 mt-2 sm:mt-1 space-y-1 sm:space-y-0 sm:space-x-3">
-                                    <ng-container *ngIf="scheduleItem.time">
+
+                                    <ng-container *ngIf="scheduleItem.value">
                                         <div class="flex items-center">
-                                            <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:clock'"></mat-icon>
-                                            <div class="ml-1.5 text-md text-secondary">{{scheduleItem.time}}</div>
-                                        </div>
-                                    </ng-container>
-                                    <ng-container *ngIf="scheduleItem.location">
-                                        <div class="flex items-center">
-                                            <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:location-marker'"></mat-icon>
-                                            <div class="ml-1.5 text-md text-secondary">{{scheduleItem.location}}</div>
+                                            <div class="ml-1.5 text-md text-secondary">{{scheduleItem.value}}</div>
                                         </div>
                                     </ng-container>
                                 </div>
                             </div>
                             <button mat-icon-button>
-                                <mat-icon [svgIcon]="'heroicons_solid:chevron-right'"></mat-icon>
+                                    <mat-icon svgIcon="arrow-down-right" class="right-icon icon-size-5 text-hint"></mat-icon>
+                        
                             </button>
                         </div>
                     </ng-container>
