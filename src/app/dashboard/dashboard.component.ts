@@ -71,22 +71,23 @@ export class DashboardComponent implements OnInit {
       series: [
         {
           name: "Net Profit",
-          data: [44, 55, 57, 56, 61, 58, 63, 60, 66]
+          data: [4, 5, 8, 4, 8, 2]
         },
         {
           name: "Revenue",
-          data: [76, 85, 101, 98, 87, 105, 91, 114, 94]
+          data: [6, 2, 2, 5, 6, 2]
         },
       ],
       chart: {
         type: "bar",
-        height: 350
+      },
+      toolbar: {
+        show: false, // Display the toolbar
       },
       plotOptions: {
         bar: {
           horizontal: false,
-          columnWidth: "15%",
-          endingShape: "rounded"
+          columnWidth: "35%",
         }
       },
       dataLabels: {
@@ -94,7 +95,7 @@ export class DashboardComponent implements OnInit {
       },
       stroke: {
         show: true,
-        width: 2,
+        width: 1,
         colors: ["transparent"]
       },
       xaxis: {
@@ -104,16 +105,10 @@ export class DashboardComponent implements OnInit {
           "Apr",
           "May",
           "Jun",
-          "Jul",
-          "Aug",
-          "Sep",
-          "Oct"
+          "Jul"
         ]
       },
       yaxis: {
-        title: {
-          text: "$ (thousands)"
-        },
       },
       fill: {
         opacity: 1
@@ -139,25 +134,19 @@ export class DashboardComponent implements OnInit {
       labels: combinedLabels,
 
       chart: {
-        width: 400,
+        width: 320,
         type: "donut"
       },
-      plotOptions: {
-        pie: {
-          innerRadius: 500
-        }
-      },
+
       legend: {
         formatter: function (val: any, opts: any) {
           const customLabels = ["Label1", "Label2", "Label3", "Label4", "Label5"];
-          console.log("DAta loggging for the legend formatter", customLabels);
           return '';
         }
       },
       dataLabels: {
         enabled: true,
         formatter: function (val: any, opts: any) {
-          console.log("DAta label of the formatter of console");
           return '';
         }
       },
@@ -171,7 +160,7 @@ export class DashboardComponent implements OnInit {
           breakpoint: 480,
           options: {
             chart: {
-              width: 200
+               width: "100%"
             },
             legend: {
               position: "bottom"
@@ -239,6 +228,7 @@ export class DashboardComponent implements OnInit {
         },
 
         height: '100%',
+        width:'100%',
         type: "area",
         toolbar: {
           show: false, // Hide the entire toolbar

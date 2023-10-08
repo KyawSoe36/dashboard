@@ -2,14 +2,14 @@
   <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
 
     <div class="sidenav_header">
-        <span class="logo">W</span>
-        <span class="logo-text">Wallet</span>    
+      <span class="logo">W</span>
+      <span class="logo-text">Wallet</span>
     </div>
 
     <ul class="menu-list">
       <li [routerLinkActive]="['active']" class="menu-item">
         <mat-icon class="icon-content-space">info</mat-icon>
-        <a routerLink="/dashboard" >DashBoard</a>
+        <a routerLink="/dashboard">DashBoard</a>
       </li>
 
       <li class="menu-item">
@@ -20,11 +20,18 @@
       <li class="menu-item">
         <mat-icon>info</mat-icon>
         <a routerLink="/transaction" routerLinkActive="active">Transaction</a>
+
+        <div class="fuse-vertical-navigation-item-badge ng-star-inserted">
+          <div class="fuse-vertical-navigation-item-badge-content px-2 bg-pink-600 text-white rounded-full"> 27 </div>
+        </div>
       </li>
 
       <li class="menu-item">
         <mat-icon>info</mat-icon>
         <a routerLink="/cashback" routerLinkActive="active">Cashback</a>
+        <div class="fuse-vertical-navigation-item-badge ng-star-inserted">
+          <div class="fuse-vertical-navigation-item-badge-content px-2 bg-pink-600 text-white rounded-full"> 27 </div>
+        </div>
       </li>
 
       <li class="menu-item">
@@ -52,14 +59,14 @@
     <mat-divider></mat-divider>
 
     <li [routerLinkActive]="['active']" class="menu-item">
-        <mat-icon class="icon-content-space">info</mat-icon>
-        <a routerLink="/setting" >Setting</a>
-      </li>
+      <mat-icon class="icon-content-space">info</mat-icon>
+      <a routerLink="/setting">Setting</a>
+    </li>
 
-      <li [routerLinkActive]="['active']" class="menu-item">
-          <mat-icon class="icon-content-space">info</mat-icon>
-          <a routerLink="/logout" >Logout</a>
-        </li>
+    <li [routerLinkActive]="['active']" class="menu-item">
+      <mat-icon class="icon-content-space">info</mat-icon>
+      <a routerLink="/logout">Logout</a>
+    </li>
 
     <mat-slide-toggle [(ngModel)]="isChecked">
       <span class="white-text">switch to light</span>

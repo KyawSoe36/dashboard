@@ -1,8 +1,10 @@
 <div class="dashboard main-container">
+
     <div class="main-header" class="flex flex-wrap sm:justify-center xs:justify-center" fxLayout="row" fxLayoutAlign="space-between center">
         <div class="header-title flex  w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4 p-4">
             <h1>DashBoard</h1>
         </div>
+
 
         <div class="search-container-group">
             <div class="search-container">
@@ -21,10 +23,12 @@
 
     <div class="main-content">
 
-        <div class="container flex flex-wrap m-6">
+
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 ">
 
             <!-- Start conversion to income-->
-            <div class="card-design;">
+            <div class="justify-between flex-auto bg-card shadow rounded-2xl bg-red-100 overflow-hidden">
                 <div class="flex items-start justify-between m-6 mb-0">
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">Income</div>
                     <div class="ml-2">
@@ -39,27 +43,29 @@
                     </div>
                 </div>
                 <div class="flex flex-col lg:flex-row lg:items-center mx-6 mt-3">
-                    <div class="text-7xl font-bold tracking-tighter leading-tight">{{data.conversions.amount | number:'1.0-0'}}</div>
+                    <div class="text-lg font-bold tracking-tighter leading-tight">${{data.conversions.amount | number:'1.0-0'}}
+                        <span class="text-sm">.47</span>
+                    </div>
                     <div class="flex lg:flex-col lg:ml-3">
                         <mat-icon class="icon-size-5 text-red-500" [svgIcon]="'heroicons_solid:trending-down'"></mat-icon>
                         <div class="flex items-center ml-1 lg:ml-0 lg:mt-0.5 text-md leading-none whitespace-nowrap text-secondary">
                             <span class="font-medium text-red-500">2%</span>
-                            <span class="ml-1">below target</span>
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col flex-auto h-20">
-                    <apx-chart class="flex-auto w-full h-full" [chart]="chartConversions.chart" [colors]="chartConversions.colors" [series]="chartConversions.series"
+                <div class="flex flex-auto">
+                    <apx-chart class="flex-auto w-full " [chart]="chartConversions.chart" [colors]="chartConversions.colors" [series]="chartConversions.series"
                         [stroke]="chartConversions.stroke" [tooltip]="chartConversions.tooltip" [xaxis]="chartConversions.xaxis"
                         [yaxis]="chartConversions.yaxis"></apx-chart>
                 </div>
             </div>
 
+
             <!-- //end of the conversion -->
 
             <!-- start conversion to expense -->
 
-            <div class=" flex flex-col flex-auto bg-card shadow rounded-2xl overflow-hidden">
+            <div class=" justify-between flex-auto bg-card shadow rounded-2xl bg-red-100 overflow-hidden">
                 <div class="flex items-start justify-between m-6 mb-0">
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">Expenses</div>
                     <div class="ml-2">
@@ -74,16 +80,17 @@
                     </div>
                 </div>
                 <div class="flex flex-col lg:flex-row lg:items-center mx-6 mt-3">
-                    <div class="text-7xl font-bold tracking-tighter leading-tight">{{data.conversions.amount | number:'1.0-0'}}</div>
+                    <div class="text-lg font-bold tracking-tighter leading-tight">{{data.conversions.amount | number:'1.0-0'}}
+                        <span class="text-sm">.47</span>
+                    </div>
                     <div class="flex lg:flex-col lg:ml-3">
                         <mat-icon class="icon-size-5 text-red-500" [svgIcon]="'heroicons_solid:trending-down'"></mat-icon>
                         <div class="flex items-center ml-1 lg:ml-0 lg:mt-0.5 text-md leading-none whitespace-nowrap text-secondary">
                             <span class="font-medium text-red-500">2%</span>
-                            <span class="ml-1">below target</span>
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col flex-auto h-20">
+                <div class="flex flex-auto">
                     <apx-chart class="flex-auto w-full h-full" [chart]="chartConversions.chart" [colors]="chartConversions.colors" [series]="chartConversions.series"
                         [stroke]="chartConversions.stroke" [tooltip]="chartConversions.tooltip" [xaxis]="chartConversions.xaxis"
                         [yaxis]="chartConversions.yaxis"></apx-chart>
@@ -95,7 +102,7 @@
 
             <!--start conversion to investment -->
 
-            <div class="sm:col-span-2 lg:col-span-1 flex flex-col flex-auto bg-card shadow rounded-2xl overflow-hidden">
+            <div class="justify-between flex-auto bg-card shadow rounded-2xl bg-red-100 overflow-hidden">
                 <div class="flex items-start justify-between m-6 mb-0">
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">Investment</div>
                     <div class="ml-2">
@@ -110,16 +117,17 @@
                     </div>
                 </div>
                 <div class="flex flex-col lg:flex-row lg:items-center mx-6 mt-3">
-                    <div class="text-7xl font-bold tracking-tighter leading-tight">{{data.conversions.amount | number:'1.0-0'}}</div>
+                    <div class="text-lg font-bold tracking-tighter leading-tight">${{data.conversions.amount | number:'1.0-0'}}
+                        <span class="text-sm">.47</span>
+                    </div>
                     <div class="flex lg:flex-col lg:ml-3">
                         <mat-icon class="icon-size-5 text-red-500" [svgIcon]="'heroicons_solid:trending-down'"></mat-icon>
                         <div class="flex items-center ml-1 lg:ml-0 lg:mt-0.5 text-md leading-none whitespace-nowrap text-secondary">
                             <span class="font-medium text-red-500">2%</span>
-                            <span class="ml-1">below target</span>
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col flex-auto h-20">
+                <div class="flex flex-col flex-auto">
                     <apx-chart class="flex-auto w-full h-full" [chart]="chartConversions.chart" [colors]="chartConversions.colors" [series]="chartConversions.series"
                         [stroke]="chartConversions.stroke" [tooltip]="chartConversions.tooltip" [xaxis]="chartConversions.xaxis"
                         [yaxis]="chartConversions.yaxis"></apx-chart>
@@ -131,7 +139,7 @@
 
             <!-- start card design  -->
 
-            <div class="sm:col-span-2 lg:col-span-1 flex flex-col flex-auto bg-card shadow rounded-2xl overflow-hidden">
+            <div class="flex flex-col flex-auto bg-card shadow rounded-2xl  bg-red-100 overflow-hidden">
                 <div class="flex items-start justify-between m-6 mb-0">
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">Investment</div>
                     <div class="ml-2">
@@ -146,7 +154,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col lg:flex-row lg:items-center mx-6 mt-3">
-                    <div class="text-7xl font-bold tracking-tighter leading-tight">{{data.conversions.amount | number:'1.0-0'}}</div>
+                    <div class="text-lg font-bold tracking-tighter leading-tight">{{data.conversions.amount | number:'1.0-0'}}</div>
                     <div class="flex lg:flex-col lg:ml-3">
                         <mat-icon class="icon-size-5 text-red-500" [svgIcon]="'heroicons_solid:trending-down'"></mat-icon>
                         <div class="flex items-center ml-1 lg:ml-0 lg:mt-0.5 text-md leading-none whitespace-nowrap text-secondary">
@@ -155,43 +163,75 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col flex-auto h-20">
+                <div class="flex flex-col flex-auto">
                     <apx-chart class="flex-auto w-full h-full" [chart]="chartConversions.chart" [colors]="chartConversions.colors" [series]="chartConversions.series"
                         [stroke]="chartConversions.stroke" [tooltip]="chartConversions.tooltip" [xaxis]="chartConversions.xaxis"
                         [yaxis]="chartConversions.yaxis"></apx-chart>
                 </div>
             </div>
 
-            <!-- end card design -->
+        </div>
 
-            <!-- start Revenue Analysis -->
-            <div class="col-span-3 flex  flex-auto bg-card shadow rounded-2xl">
-                <apx-chart [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis" [yaxis]="chartOptions.yaxis"
-                    [stroke]="chartOptions.stroke" [tooltip]="chartOptions.tooltip" [dataLabels]="chartOptions.dataLabels"></apx-chart>
+        <!-- end card design -->
+
+        <!-- end of the first row design -->
+
+
+        <!-- start of the second row design -->
+        <!-- start Revenue Analysis -->
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 ">
+
+            <div class="col-span-2 justify-between flex-auto bg-card shadow rounded-2xl  bg-red-100 ">
+                <div class="flex items-start justify-between m-6 mb-0">
+                    <div class="text-lg font-medium tracking-tight leading-6 truncate">Revenue Analysis</div>
+                </div>
+
+                <div class="flex flex-auto">
+                    <apx-chart class="flex-auto w-full h-full" [series]="chartOptions.series" [chart]="chartOptions.chart" [xaxis]="chartOptions.xaxis"
+                        [yaxis]="chartOptions.yaxis" [stroke]="chartOptions.stroke" [tooltip]="chartOptions.tooltip" [dataLabels]="chartOptions.dataLabels"></apx-chart>
+                </div>
             </div>
-
             <!-- end revenuse Analysis -->
 
 
             <!-- start financial analysis line chart -->
+            <div class="flex flex-col flex-auto bg-card shadow rounded-2xl  bg-red-100 overflow-hidden">
 
-            <apx-chart [series]="lineChartOptions.series" [chart]="lineChartOptions.chart" [dataLabels]="lineChartOptions.dataLabels"
-                [plotOptions]="lineChartOptions.plotOptions" [yaxis]="lineChartOptions.yaxis" [legend]="lineChartOptions.legend"
-                [fill]="lineChartOptions.fill" [stroke]="lineChartOptions.stroke" [tooltip]="lineChartOptions.tooltip" [xaxis]="lineChartOptions.xaxis"></apx-chart>
+                <div class="flex items-start justify-between m-6 mb-0">
+                    <div class="text-lg font-medium tracking-tight leading-6 truncate">Financial Analysis</div>
+                    <div class="ml-2">
+                        <button class="h-6 min-h-6 px-2 rounded-full bg-hover" mat-button [matMenuTriggerFor]="conversionMenu">
+                            <span class="font-medium text-sm text-secondary">30 days</span>
+                        </button>
+                        <mat-menu #conversionMenu="matMenu">
+                            <button mat-menu-item>30 days</button>
+                            <button mat-menu-item>3 months</button>
+                            <button mat-menu-item>9 months</button>
+                        </mat-menu>
+                    </div>
+                </div>
+                <div class="flex flex-col flex-auto  w-full h-full">
+                    <apx-chart class="flex-auto w-full h-full" [series]="lineChartOptions.series" [chart]="lineChartOptions.chart" [dataLabels]="lineChartOptions.dataLabels"
+                        [plotOptions]="lineChartOptions.plotOptions" [yaxis]="lineChartOptions.yaxis" [legend]="lineChartOptions.legend"
+                        [fill]="lineChartOptions.fill" [stroke]="lineChartOptions.stroke" [tooltip]="lineChartOptions.tooltip"
+                        [xaxis]="lineChartOptions.xaxis"></apx-chart>
+                </div>
+            </div>
             <!-- end start financial analysis line chart -->
 
 
             <!-- start table design for quick transfter -->
 
-            <div class="sm:col-span-2 md:col-span-4 lg:col-span-2 flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
+            <div class=" flex flex-col flex-auto p-6 bg-card shadow rounded-2xl bg-red-100 overflow-hidden">
                 <div class="flex flex-col sm:flex-row items-start justify-between">
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">Quick transfers</div>
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">
                         <span class="opacity-50">add</span>
-                            <button mat-icon-button>
-                                    <mat-icon svgIcon="plus" class="right-icon icon-size-5 text-hint"></mat-icon>
-    
-                                </button>
+                        <button mat-icon-button>
+                            <mat-icon svgIcon="plus" class="right-icon icon-size-5 text-hint"></mat-icon>
+
+                        </button>
                     </div>
 
                 </div>
@@ -213,208 +253,236 @@
                                 </div>
                             </div>
                             <div class="flex items-center justify-end flex-grow">
-                            <button mat-icon-button>
-                                <mat-icon svgIcon="chevron-right" class="right-icon icon-size-5 text-hint"></mat-icon>
+                                <button mat-icon-button>
+                                    <mat-icon svgIcon="chevron-right" class="right-icon icon-size-5 text-hint"></mat-icon>
 
-                            </button>
+                                </button>
+                            </div>
                         </div>
+                    </ng-container>
                 </div>
-                </ng-container>
             </div>
+            <!-- end table design for quick transfter -->
+            <!-- end of the second row -->
+
         </div>
 
-        <!-- end table design for quick transfter -->
+        <!-- start of the third row -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4  mt-4 ">
+            <!-- start donut chart options -->
+
+            <div class="min-w-400 justify-between bg-card shadow rounded-2xl bg-red-100 ">
+                <div class="flex items-start justify-between m-6 mb-0">
+                    <div class="text-lg font-medium tracking-tight leading-6 truncate">Expenses</div>
+                    <div class="ml-2">
+                        <button class="h-6 min-h-6 px-2 rounded-full bg-hover" mat-button [matMenuTriggerFor]="conversionMenu">
+                            <span class="font-medium text-sm text-secondary">30 days</span>
+                        </button>
+                        <mat-menu #conversionMenu="matMenu">
+                            <button mat-menu-item>30 days</button>
+                            <button mat-menu-item>3 months</button>
+                            <button mat-menu-item>9 months</button>
+                        </mat-menu>
+                    </div>
+                </div>
+                <div class="flex flex-col lg:flex-row lg:items-center mx-6 mt-3">
+                    <div class="flex lg:flex-col lg:ml-3">
+                        <mat-icon class="icon-size-5 text-red-500" [svgIcon]="'heroicons_solid:trending-down'"></mat-icon>
+                        <div class="flex items-center ml-1 lg:ml-0 lg:mt-0.5 text-md leading-none whitespace-nowrap text-secondary">
+                            <span class="font-medium text-red-500">2%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col flex-auto  w-full h-full">
+                    <apx-chart class="flex-auto w-full h-full" [series]="donutChartOptions.series" [chart]="donutChartOptions.chart" [labels]="donutChartOptions.labels"
+                        [fill]="donutChartOptions.fill" [dataLabels]="donutChartOptions.dataLabels" [responsive]="donutChartOptions.responsive"></apx-chart>
+
+                </div>
+            </div>
+
+
+            <!-- end donut chart options -->
 
 
 
-        <!-- start donut chart options -->
-
-        <apx-chart [series]="donutChartOptions.series" [chart]="donutChartOptions.chart" [labels]="donutChartOptions.labels" [fill]="donutChartOptions.fill"
-            [dataLabels]="donutChartOptions.dataLabels" [responsive]="donutChartOptions.responsive"></apx-chart>
-        <!-- end donut chart options -->
 
 
+            <!-- start table design Investment-->
 
+            <div class="flex flex-col flex-auto p-6 bg-card shadow rounded-2xl bg-red-100 overflow-hidden">
+                <div class="flex flex-col sm:flex-row items-start justify-between">
+                    <div class="text-lg font-medium tracking-tight leading-6 truncate">Investment</div>
+                    <div class="mt-3 sm:mt-0 sm:ml-2">
 
-
-        <!-- start table design Investment-->
-
-        <div class="sm:col-span-2 md:col-span-4 lg:col-span-2 flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
-            <div class="flex flex-col sm:flex-row items-start justify-between">
-                <div class="text-lg font-medium tracking-tight leading-6 truncate">Investment</div>
-                <div class="mt-3 sm:mt-0 sm:ml-2">
-
-                    <!-- TODO::ADD OPTION BUTTON -->
-                    <!-- <mat-button-toggle-group value="today" #scheduleDaySelector="matButtonToggleGroup">
+                        <!-- TODO::ADD OPTION BUTTON -->
+                        <!-- <mat-button-toggle-group value="today" #scheduleDaySelector="matButtonToggleGroup">
                         <mat-button-toggle value="today">Today</mat-button-toggle>
                         <mat-button-toggle value="tomorrow">Tomorrow</mat-button-toggle>
                     </mat-button-toggle-group> -->
+                    </div>
+                </div>
+                <div class="flex flex-col mt-2 divide-y">
+                    <ng-container *ngFor="let scheduleItem of transaction.schedule[scheduleDaySelector.value]; trackBy: trackByFn">
+                        <div class="flex flex-row items-center justify-between py-4 px-0.5">
+                            <div class="flex flex-col">
+                                <div class="font-medium">{{scheduleItem.title}}</div>
+                                <div class="flex flex-col sm:flex-row sm:items-center -ml-0.5 mt-2 sm:mt-1 space-y-1 sm:space-y-0 sm:space-x-3">
+                                    <ng-container *ngIf="scheduleItem.time">
+                                        <div class="flex items-center">
+                                            <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:clock'"></mat-icon>
+                                            <div class="ml-1.5 text-md text-secondary">{{scheduleItem.time}}</div>
+                                        </div>
+                                    </ng-container>
+                                    <ng-container *ngIf="scheduleItem.location">
+                                        <div class="flex items-center">
+                                            <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:location-marker'"></mat-icon>
+                                            <div class="ml-1.5 text-md text-secondary">{{scheduleItem.location}}</div>
+                                        </div>
+                                    </ng-container>
+                                </div>
+                            </div>
+                            <button mat-icon-button>
+                                <mat-icon [svgIcon]="'heroicons_solid:chevron-right'"></mat-icon>
+                            </button>
+                        </div>
+                    </ng-container>
                 </div>
             </div>
-            <div class="flex flex-col mt-2 divide-y">
-                <ng-container *ngFor="let scheduleItem of transaction.schedule[scheduleDaySelector.value]; trackBy: trackByFn">
-                    <div class="flex flex-row items-center justify-between py-4 px-0.5">
-                        <div class="flex flex-col">
-                            <div class="font-medium">{{scheduleItem.title}}</div>
-                            <div class="flex flex-col sm:flex-row sm:items-center -ml-0.5 mt-2 sm:mt-1 space-y-1 sm:space-y-0 sm:space-x-3">
-                                <ng-container *ngIf="scheduleItem.time">
-                                    <div class="flex items-center">
-                                        <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:clock'"></mat-icon>
-                                        <div class="ml-1.5 text-md text-secondary">{{scheduleItem.time}}</div>
-                                    </div>
-                                </ng-container>
-                                <ng-container *ngIf="scheduleItem.location">
-                                    <div class="flex items-center">
-                                        <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:location-marker'"></mat-icon>
-                                        <div class="ml-1.5 text-md text-secondary">{{scheduleItem.location}}</div>
-                                    </div>
-                                </ng-container>
+
+            <!-- end table design -->
+
+
+
+            <!-- start table design transaction -->
+
+            <div class="flex flex-col flex-auto p-6 bg-card shadow rounded-2xl  bg-red-100 overflow-hidden">
+                <div class="flex flex-col sm:flex-row items-start justify-between">
+                    <div class="text-lg font-medium tracking-tight leading-6 truncate">Transactions</div>
+                    <div class="mt-3 sm:mt-0 sm:ml-2">
+                        <mat-button-toggle-group value="today" #scheduleDaySelector="matButtonToggleGroup">
+                            <mat-button-toggle value="today">Today</mat-button-toggle>
+                            <mat-button-toggle value="tomorrow">Tomorrow</mat-button-toggle>
+                        </mat-button-toggle-group>
+                    </div>
+                </div>
+                <div class="flex flex-col mt-2 divide-y">
+                    <ng-container *ngFor="let scheduleItem of transaction.schedule[scheduleDaySelector.value]; trackBy: trackByFn">
+                        <div class="flex flex-row items-center justify-between py-4 px-0.5">
+                            <div class="flex flex-col">
+                                <div class="font-medium">{{scheduleItem.title}}</div>
+                                <div class="flex flex-col sm:flex-row sm:items-center -ml-0.5 mt-2 sm:mt-1 space-y-1 sm:space-y-0 sm:space-x-3">
+                                    <ng-container *ngIf="scheduleItem.time">
+                                        <div class="flex items-center">
+                                            <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:clock'"></mat-icon>
+                                            <div class="ml-1.5 text-md text-secondary">{{scheduleItem.time}}</div>
+                                        </div>
+                                    </ng-container>
+                                    <ng-container *ngIf="scheduleItem.location">
+                                        <div class="flex items-center">
+                                            <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:location-marker'"></mat-icon>
+                                            <div class="ml-1.5 text-md text-secondary">{{scheduleItem.location}}</div>
+                                        </div>
+                                    </ng-container>
+                                </div>
+                            </div>
+                            <button mat-icon-button>
+                                <mat-icon [svgIcon]="'heroicons_solid:chevron-right'"></mat-icon>
+                            </button>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+
+            <!-- end table design transaction -->
+
+
+
+
+            <!-- Budget  to goals-->
+            <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl bg-red-100 shadow">
+                <div class="flex items-center">
+                    <div class="flex flex-col">
+                        <div class="mr-4 text-lg font-medium tracking-tight leading-6 truncate">Goals</div>
+
+                    </div>
+                    <div class="ml-auto -mt-2 -mr-2">
+                        <button mat-icon-button [matMenuTriggerFor]="budgetMenu">
+                            <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:dots-vertical'"></mat-icon>
+                        </button>
+                        <mat-menu #budgetMenu="matMenu">
+                            <button mat-menu-item>Expenses breakdown</button>
+                            <button mat-menu-item>Savings breakdown</button>
+                            <button mat-menu-item>Bills breakdown</button>
+                            <mat-divider class="my-2"></mat-divider>
+                            <button mat-menu-item>
+                                <span class="flex items-center">
+                                    <mat-icon class="icon-size-5 mr-3" [svgIcon]="'heroicons_solid:printer'"></mat-icon>
+                                    <span>Print budget summary</span>
+                                </span>
+                            </button>
+                            <button mat-menu-item>
+                                <span class="flex items-center">
+                                    <mat-icon class="icon-size-5 mr-3" [svgIcon]="'heroicons_solid:mail'"></mat-icon>
+                                    <span>Email budget summary</span>
+                                </span>
+                            </button>
+                        </mat-menu>
+                    </div>
+                </div>
+                <div class="my-8 space-y-8">
+                    <div class="flex flex-col">
+                        <div class="flex items-center">
+                            <div class="flex items-center justify-center w-14 h-14 rounded bg-red-100 text-red-800 dark:bg-red-600 dark:text-red-50">
+                                <mat-icon class="text-current" [svgIcon]="'heroicons_outline:credit-card'"></mat-icon>
+                            </div>
+                            <div class="flex-auto ml-4 leading-none">
+                                <div class="text-sm font-medium text-secondary">Expenses</div>
+                                <div class="mt-2 font-medium text-2xl">{{finance.budget.expenses | currency:'USD'}}</div>
+                                <mat-progress-bar class="mt-3 rounded-full" [color]="'warn'" [mode]="'determinate'" [value]="(finance.budget.expenses  * 100) / finance.budget.expensesLimit"></mat-progress-bar>
+                            </div>
+                            <div class="flex items-end justify-end min-w-18 mt-auto ml-6">
+                                <div class="text-lg leading-none">2.6%</div>
+                                <mat-icon class="text-green-600 icon-size-4 ml-1" [svgIcon]="'heroicons_solid:arrow-narrow-down'"></mat-icon>
                             </div>
                         </div>
-                        <button mat-icon-button>
-                            <mat-icon [svgIcon]="'heroicons_solid:chevron-right'"></mat-icon>
-                        </button>
                     </div>
-                </ng-container>
-            </div>
-        </div>
-
-        <!-- end table design -->
-
-
-
-        <!-- start table design transaction -->
-
-        <div class="sm:col-span-2 md:col-span-4 lg:col-span-2 flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden">
-            <div class="flex flex-col sm:flex-row items-start justify-between">
-                <div class="text-lg font-medium tracking-tight leading-6 truncate">Transactions</div>
-                <div class="mt-3 sm:mt-0 sm:ml-2">
-                    <mat-button-toggle-group value="today" #scheduleDaySelector="matButtonToggleGroup">
-                        <mat-button-toggle value="today">Today</mat-button-toggle>
-                        <mat-button-toggle value="tomorrow">Tomorrow</mat-button-toggle>
-                    </mat-button-toggle-group>
-                </div>
-            </div>
-            <div class="flex flex-col mt-2 divide-y">
-                <ng-container *ngFor="let scheduleItem of transaction.schedule[scheduleDaySelector.value]; trackBy: trackByFn">
-                    <div class="flex flex-row items-center justify-between py-4 px-0.5">
-                        <div class="flex flex-col">
-                            <div class="font-medium">{{scheduleItem.title}}</div>
-                            <div class="flex flex-col sm:flex-row sm:items-center -ml-0.5 mt-2 sm:mt-1 space-y-1 sm:space-y-0 sm:space-x-3">
-                                <ng-container *ngIf="scheduleItem.time">
-                                    <div class="flex items-center">
-                                        <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:clock'"></mat-icon>
-                                        <div class="ml-1.5 text-md text-secondary">{{scheduleItem.time}}</div>
-                                    </div>
-                                </ng-container>
-                                <ng-container *ngIf="scheduleItem.location">
-                                    <div class="flex items-center">
-                                        <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:location-marker'"></mat-icon>
-                                        <div class="ml-1.5 text-md text-secondary">{{scheduleItem.location}}</div>
-                                    </div>
-                                </ng-container>
+                    <div class="flex flex-col">
+                        <div class="flex items-center">
+                            <div class="flex items-center justify-center w-14 h-14 rounded bg-indigo-100 text-indigo-800 dark:bg-indigo-600 dark:text-indigo-50">
+                                <mat-icon class="text-current" [svgIcon]="'heroicons_outline:cash'"></mat-icon>
+                            </div>
+                            <div class="flex-auto ml-4 leading-none">
+                                <div class="text-sm font-medium text-secondary">Savings</div>
+                                <div class="mt-2 font-medium text-2xl">{{finance.budget.savings | currency:'USD'}}</div>
+                                <mat-progress-bar class="mt-3 rounded-full" [mode]="'determinate'" [value]="(finance.budget.savings  * 100) / finance.budget.savingsGoal"></mat-progress-bar>
+                            </div>
+                            <div class="flex items-end justify-end min-w-18 mt-auto ml-6">
+                                <div class="text-lg leading-none">12.7%</div>
+                                <mat-icon class="text-red-600 icon-size-4 ml-1" [svgIcon]="'heroicons_solid:arrow-narrow-up'"></mat-icon>
                             </div>
                         </div>
-                        <button mat-icon-button>
-                            <mat-icon [svgIcon]="'heroicons_solid:chevron-right'"></mat-icon>
-                        </button>
                     </div>
-                </ng-container>
+                    <div class="flex flex-col">
+                        <div class="flex items-center">
+                            <div class="flex items-center justify-center w-14 h-14 rounded bg-teal-100 text-teal-800 dark:bg-teal-600 dark:text-teal-50">
+                                <mat-icon class="text-current" [svgIcon]="'heroicons_outline:light-bulb'"></mat-icon>
+                            </div>
+                            <div class="flex-auto ml-4 leading-none">
+                                <div class="text-sm font-medium text-secondary">Bills</div>
+                                <div class="mt-2 font-medium text-2xl">{{finance.budget.bills | currency:'USD'}}</div>
+                                <mat-progress-bar class="mt-3 rounded-full" [mode]="'determinate'" [value]="(finance.budget.bills  * 100) / finance.budget.billsLimit"></mat-progress-bar>
+                            </div>
+                            <div class="flex items-end justify-end min-w-18 mt-auto ml-6">
+                                <div class="text-lg leading-none">105.7%</div>
+                                <mat-icon class="text-red-600 icon-size-4 ml-1" [svgIcon]="'heroicons_solid:arrow-narrow-up'"></mat-icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+            <!-- end Budget to Goals-->
         </div>
-
-        <!-- end table design transaction -->
-
-
-
-
-        <!-- Budget  to goals-->
-        <div class="flex flex-col flex-auto p-6 bg-card rounded-2xl shadow">
-            <div class="flex items-center">
-                <div class="flex flex-col">
-                    <div class="mr-4 text-lg font-medium tracking-tight leading-6 truncate">Goals</div>
-                    
-                </div>
-                <div class="ml-auto -mt-2 -mr-2">
-                    <button mat-icon-button [matMenuTriggerFor]="budgetMenu">
-                        <mat-icon class="icon-size-5" [svgIcon]="'heroicons_solid:dots-vertical'"></mat-icon>
-                    </button>
-                    <mat-menu #budgetMenu="matMenu">
-                        <button mat-menu-item>Expenses breakdown</button>
-                        <button mat-menu-item>Savings breakdown</button>
-                        <button mat-menu-item>Bills breakdown</button>
-                        <mat-divider class="my-2"></mat-divider>
-                        <button mat-menu-item>
-                            <span class="flex items-center">
-                                <mat-icon class="icon-size-5 mr-3" [svgIcon]="'heroicons_solid:printer'"></mat-icon>
-                                <span>Print budget summary</span>
-                            </span>
-                        </button>
-                        <button mat-menu-item>
-                            <span class="flex items-center">
-                                <mat-icon class="icon-size-5 mr-3" [svgIcon]="'heroicons_solid:mail'"></mat-icon>
-                                <span>Email budget summary</span>
-                            </span>
-                        </button>
-                    </mat-menu>
-                </div>
-            </div>
-            <div class="my-8 space-y-8">
-                <div class="flex flex-col">
-                    <div class="flex items-center">
-                        <div class="flex items-center justify-center w-14 h-14 rounded bg-red-100 text-red-800 dark:bg-red-600 dark:text-red-50">
-                            <mat-icon class="text-current" [svgIcon]="'heroicons_outline:credit-card'"></mat-icon>
-                        </div>
-                        <div class="flex-auto ml-4 leading-none">
-                            <div class="text-sm font-medium text-secondary">Expenses</div>
-                            <div class="mt-2 font-medium text-2xl">{{finance.budget.expenses | currency:'USD'}}</div>
-                            <mat-progress-bar class="mt-3 rounded-full" [color]="'warn'" [mode]="'determinate'" [value]="(finance.budget.expenses  * 100) / finance.budget.expensesLimit"></mat-progress-bar>
-                        </div>
-                        <div class="flex items-end justify-end min-w-18 mt-auto ml-6">
-                            <div class="text-lg leading-none">2.6%</div>
-                            <mat-icon class="text-green-600 icon-size-4 ml-1" [svgIcon]="'heroicons_solid:arrow-narrow-down'"></mat-icon>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col">
-                    <div class="flex items-center">
-                        <div class="flex items-center justify-center w-14 h-14 rounded bg-indigo-100 text-indigo-800 dark:bg-indigo-600 dark:text-indigo-50">
-                            <mat-icon class="text-current" [svgIcon]="'heroicons_outline:cash'"></mat-icon>
-                        </div>
-                        <div class="flex-auto ml-4 leading-none">
-                            <div class="text-sm font-medium text-secondary">Savings</div>
-                            <div class="mt-2 font-medium text-2xl">{{finance.budget.savings | currency:'USD'}}</div>
-                            <mat-progress-bar class="mt-3 rounded-full" [mode]="'determinate'" [value]="(finance.budget.savings  * 100) / finance.budget.savingsGoal"></mat-progress-bar>
-                        </div>
-                        <div class="flex items-end justify-end min-w-18 mt-auto ml-6">
-                            <div class="text-lg leading-none">12.7%</div>
-                            <mat-icon class="text-red-600 icon-size-4 ml-1" [svgIcon]="'heroicons_solid:arrow-narrow-up'"></mat-icon>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col">
-                    <div class="flex items-center">
-                        <div class="flex items-center justify-center w-14 h-14 rounded bg-teal-100 text-teal-800 dark:bg-teal-600 dark:text-teal-50">
-                            <mat-icon class="text-current" [svgIcon]="'heroicons_outline:light-bulb'"></mat-icon>
-                        </div>
-                        <div class="flex-auto ml-4 leading-none">
-                            <div class="text-sm font-medium text-secondary">Bills</div>
-                            <div class="mt-2 font-medium text-2xl">{{finance.budget.bills | currency:'USD'}}</div>
-                            <mat-progress-bar class="mt-3 rounded-full" [mode]="'determinate'" [value]="(finance.budget.bills  * 100) / finance.budget.billsLimit"></mat-progress-bar>
-                        </div>
-                        <div class="flex items-end justify-end min-w-18 mt-auto ml-6">
-                            <div class="text-lg leading-none">105.7%</div>
-                            <mat-icon class="text-red-600 icon-size-4 ml-1" [svgIcon]="'heroicons_solid:arrow-narrow-up'"></mat-icon>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end Budget to Goals-->
 
     </div>
-
-
-</div>
 
 </div>
