@@ -134,7 +134,6 @@ export class DashboardComponent implements OnInit {
       labels: combinedLabels,
 
       chart: {
-        width: 320,
         type: "donut"
       },
 

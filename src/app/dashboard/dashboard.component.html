@@ -178,11 +178,11 @@
 
 
         <!-- start of the second row design -->
-        <!-- start Revenue Analysis -->
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4 ">
 
-            <div class="col-span-2 justify-between flex-auto bg-card shadow rounded-2xl  bg-red-100 ">
+            <!-- start Revenue Analysis -->
+            <div class="xs:col-span-12 sm:col-span-2 justify-between flex-auto bg-card shadow rounded-2xl overflow-hidden  bg-red-100 ">
                 <div class="flex items-start justify-between m-6 mb-0">
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">Revenue Analysis</div>
                 </div>
@@ -196,7 +196,7 @@
 
 
             <!-- start financial analysis line chart -->
-            <div class="flex flex-col flex-auto bg-card shadow rounded-2xl  bg-red-100 overflow-hidden">
+            <div class=" flex-auto bg-card shadow rounded-2xl  bg-red-100 overflow-hidden w-full h-full">
 
                 <div class="flex items-start justify-between m-6 mb-0">
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">Financial Analysis</div>
@@ -219,6 +219,12 @@
                 </div>
             </div>
             <!-- end start financial analysis line chart -->
+
+
+
+
+
+
 
 
             <!-- start table design for quick transfter -->
@@ -271,7 +277,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4  mt-4 ">
             <!-- start donut chart options -->
 
-            <div class="min-w-400 justify-between bg-card shadow rounded-2xl bg-red-100 ">
+            <div class="justify-between bg-card shadow rounded-2xl bg-red-100 overflow-hidden ">
                 <div class="flex items-start justify-between m-6 mb-0">
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">Expenses</div>
                     <div class="ml-2">
@@ -293,7 +299,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col flex-auto  w-full h-full">
+                <div class="flex flex-col flex-auto w-full p-100">
                     <apx-chart class="flex-auto w-full h-full" [series]="donutChartOptions.series" [chart]="donutChartOptions.chart" [labels]="donutChartOptions.labels"
                         [fill]="donutChartOptions.fill" [dataLabels]="donutChartOptions.dataLabels" [responsive]="donutChartOptions.responsive"></apx-chart>
 
