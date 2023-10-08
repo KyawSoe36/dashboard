@@ -5,6 +5,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundColor: {
+        'card-custom-purple': '#56459e',
+      },
+
       screens: {
         'sm': '640px',
         'md': '768px',
