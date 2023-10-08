@@ -8,50 +8,51 @@
 
     <ul class="menu-list">
       <li [routerLinkActive]="['active']" class="menu-item">
-        <mat-icon class="icon-content-space">info</mat-icon>
+        <mat-icon svgIcon="squares-2x2"></mat-icon>
         <a routerLink="/dashboard">DashBoard</a>
       </li>
 
-      <li class="menu-item">
-        <mat-icon>info</mat-icon>
-        <a routerLink="/wallet" routerLinkActive="active">Wallet</a>
+      <li [routerLinkActive]="['active']" class="menu-item">
+        <mat-icon svgIcon="wallet"></mat-icon>
+        <a routerLink="/wallet">Wallet</a>
       </li>
 
-      <li class="menu-item">
-        <mat-icon>info</mat-icon>
-        <a routerLink="/transaction" routerLinkActive="active">Transaction</a>
+      <li [routerLinkActive]="['active']" class="menu-item items-center">
+        <mat-icon svgIcon="arrows-right-left"></mat-icon>
+        <a routerLink="/transaction">Transaction</a>
 
-        <div class="fuse-vertical-navigation-item-badge ng-star-inserted">
-          <div class="fuse-vertical-navigation-item-badge-content px-2 bg-pink-600 text-white rounded-full"> 27 </div>
+        <div class="pl-6 ">
+          <div class="px-2 text-white rounded-full"> 27 </div>
         </div>
       </li>
 
-      <li class="menu-item">
-        <mat-icon>info</mat-icon>
-        <a routerLink="/cashback" routerLinkActive="active">Cashback</a>
-        <div class="fuse-vertical-navigation-item-badge ng-star-inserted">
-          <div class="fuse-vertical-navigation-item-badge-content px-2 bg-pink-600 text-white rounded-full"> 27 </div>
+      <li [routerLinkActive]="['active']" class="menu-item items-center">
+        <mat-icon svgIcon="circle-stack"></mat-icon>
+        <a routerLink="/cashback">Cashback</a>
+
+        <div class="pl-6 ng-star-inserted">
+          <div class="px-2 bg-pink-600 text-white rounded-full"> 27 </div>
         </div>
       </li>
 
-      <li class="menu-item">
-        <mat-icon>info</mat-icon>
-        <a routerLink="/payments" routerLinkActive="active">Payments</a>
+      <li [routerLinkActive]="['active']" class="menu-item">
+        <mat-icon svgIcon="currency-dollar"></mat-icon>
+        <a routerLink="/payments">Payments</a>
       </li>
 
-      <li class="menu-item">
-        <mat-icon>info</mat-icon>
-        <a routerLink="/investments" routerLinkActive="active">Investments</a>
+      <li [routerLinkActive]="['active']" class="menu-item">
+        <mat-icon svgIcon="arrow-trending-up"></mat-icon>
+        <a routerLink="/investments">Investments</a>
       </li>
 
-      <li class="menu-item">
-        <mat-icon>info</mat-icon>
-        <a routerLink="/profile" routerLinkActive="active">Profile</a>
+      <li [routerLinkActive]="['active']" class="menu-item">
+        <mat-icon svgIcon="user"></mat-icon>
+        <a routerLink="/profile">Profile</a>
       </li>
 
-      <li class="menu-item">
-        <mat-icon>info</mat-icon>
-        <a routerLink="/support" routerLinkActive="active">Support</a>
+      <li [routerLinkActive]="['active']" class="menu-item">
+        <mat-icon svgIcon="chat-bubble-oval-left"></mat-icon>
+        <a routerLink="/support">Support</a>
       </li>
 
     </ul>
@@ -59,12 +60,12 @@
     <mat-divider></mat-divider>
 
     <li [routerLinkActive]="['active']" class="menu-item">
-      <mat-icon class="icon-content-space">info</mat-icon>
+      <mat-icon svgIcon="cog"></mat-icon>
       <a routerLink="/setting">Setting</a>
     </li>
 
     <li [routerLinkActive]="['active']" class="menu-item">
-      <mat-icon class="icon-content-space">info</mat-icon>
+      <mat-icon svgIcon="arrow-right-on-rectangle"></mat-icon>
       <a routerLink="/logout">Logout</a>
     </li>
 

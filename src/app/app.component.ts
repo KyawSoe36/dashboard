@@ -29,7 +29,49 @@ export class AppComponent {
       "arrow-down-right",
       this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/arrow-down-right.svg")
     );
-   }
+    this.matIconRegistry.addSvgIcon(
+      "squares-2x2",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/squares-2x2.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "wallet",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/wallet.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "arrows-right-left",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/arrows-right-left.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "circle-stack",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/circle-stack.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "currency-dollar",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/currency-dollar.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "arrow-trending-up",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/arrow-trending-up.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "user",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/user.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "chat-bubble-oval-left",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/chat-bubble-oval-left.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "cog",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/cog.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "arrow-right-on-rectangle",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/arrow-right-on-rectangle.svg")
+    );
+    
+
+  }
 
   ngAfterViewInit() {
     this.observer
