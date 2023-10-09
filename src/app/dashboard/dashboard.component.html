@@ -312,28 +312,38 @@
                     </div>
                 </div>
                 <div class="flex flex-col mt-2 divide-y">
-                    <ng-container *ngFor="let scheduleItem of transaction.schedule[scheduleDaySelector.value]; trackBy: trackByFn">
+                    <ng-container *ngFor="let scheduleItem of transaction.schedule['today']; trackBy: trackByFn">
                         <div class="flex flex-row items-center justify-between py-4 px-0.5">
                             <div class="flex flex-col">
-                                <div class="font-medium">{{scheduleItem.title}}</div>
-                                <div class="flex flex-col sm:flex-row sm:items-center -ml-0.5 mt-2 sm:mt-1 space-y-1 sm:space-y-0 sm:space-x-3">
-                                    <ng-container *ngIf="scheduleItem.time">
-                                        <div class="flex items-center">
-                                            <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:clock'"></mat-icon>
-                                            <div class="ml-1.5 text-md text-secondary">{{scheduleItem.time}}</div>
+                                <div class="flex items-center">
+                                    <div class=" avatar-text  ">
+                                        <div class="text-center">
+                                            <mat-icon>notifications</mat-icon>
                                         </div>
-                                    </ng-container>
-                                    <ng-container *ngIf="scheduleItem.location">
-                                        <div class="flex items-center">
-                                            <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:location-marker'"></mat-icon>
-                                            <div class="ml-1.5 text-md text-secondary">{{scheduleItem.location}}</div>
+                                    </div>
+
+                                    <div class="flex-auto flex-col justify-center ml-4 leading-none">
+                                        <div class="flex justify-center">
+                                            <div class="font-medium">{{scheduleItem.title}}</div>
+                                            <div class="flex flex-col sm:flex-row sm:items-center -ml-0.5 mt-2 sm:mt-1 space-y-1 sm:space-y-0 sm:space-x-3">
+                                                <!-- <ng-container *ngIf="scheduleItem.time">
+                                                    <div class="flex items-center">
+                                                        <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:clock'"></mat-icon>
+                                                        <div class="ml-1.5 text-md text-secondary">{{scheduleItem.time}}</div>
+                                                    </div>
+                                                </ng-container> -->
+                                                <ng-container *ngIf="scheduleItem.location">
+                                                    <div class="flex items-center">
+                                                        <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:location-marker'"></mat-icon>
+                                                        <div class="ml-1.5 text-md text-secondary">{{scheduleItem.location}}</div>
+                                                    </div>
+                                                </ng-container>
+                                            </div>
                                         </div>
-                                    </ng-container>
+
+                                    </div>
                                 </div>
                             </div>
-                            <button mat-icon-button>
-                                <mat-icon [svgIcon]="'heroicons_solid:chevron-right'"></mat-icon>
-                            </button>
                         </div>
                     </ng-container>
                 </div>
@@ -346,36 +356,48 @@
             <div class="flex flex-col flex-auto p-6 bg-card shadow rounded-2xl overflow-hidden" [ngClass]="getCurrentTheme() == 'light' ? 'light-bg-card-item' : 'dark-bg-card-item'">
                 <div class="flex flex-col sm:flex-row items-start justify-between">
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">Transactions</div>
-                    <div class="mt-3 sm:mt-0 sm:ml-2">
+                    <!-- <div class="mt-3 sm:mt-0 sm:ml-2">
                         <mat-button-toggle-group value="today" #scheduleDaySelector="matButtonToggleGroup">
                             <mat-button-toggle value="today">Today</mat-button-toggle>
                             <mat-button-toggle value="tomorrow">Tomorrow</mat-button-toggle>
                         </mat-button-toggle-group>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="flex flex-col mt-2 divide-y">
-                    <ng-container *ngFor="let scheduleItem of transaction.schedule[scheduleDaySelector.value]; trackBy: trackByFn">
+                    <ng-container *ngFor="let scheduleItem of transaction.schedule['today']; trackBy: trackByFn">
                         <div class="flex flex-row items-center justify-between py-4 px-0.5">
                             <div class="flex flex-col">
-                                <div class="font-medium">{{scheduleItem.title}}</div>
-                                <div class="flex flex-col sm:flex-row sm:items-center -ml-0.5 mt-2 sm:mt-1 space-y-1 sm:space-y-0 sm:space-x-3">
-                                    <ng-container *ngIf="scheduleItem.time">
-                                        <div class="flex items-center">
-                                            <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:clock'"></mat-icon>
-                                            <div class="ml-1.5 text-md text-secondary">{{scheduleItem.time}}</div>
+
+                                <div class="flex items-center">
+                                    <div class=" avatar-text  ">
+                                        <div class="text-center">
+                                            <mat-icon>notifications</mat-icon>
                                         </div>
-                                    </ng-container>
-                                    <ng-container *ngIf="scheduleItem.location">
-                                        <div class="flex items-center">
-                                            <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:location-marker'"></mat-icon>
-                                            <div class="ml-1.5 text-md text-secondary">{{scheduleItem.location}}</div>
+                                    </div>
+                                    <div class="flex-auto flex-col justify-center ml-4 leading-none">
+                                        <div class="flex justify-center">
+                                            <div class="font-medium">{{scheduleItem.title}}</div>
+                                            <div class="flex flex-col sm:flex-row sm:items-center -ml-0.5 mt-2 sm:mt-1 space-y-1 sm:space-y-0 sm:space-x-3">
+                                                <ng-container *ngIf="scheduleItem.time">
+                                                    <div class="flex items-center">
+                                                        <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:clock'"></mat-icon>
+                                                        <div class="ml-1.5 text-md text-secondary">{{scheduleItem.time}}</div>
+                                                    </div>
+                                                </ng-container>
+                                                <ng-container *ngIf="scheduleItem.location">
+                                                    <div class="flex items-center">
+                                                        <mat-icon class="icon-size-5 text-hint" [svgIcon]="'heroicons_solid:location-marker'"></mat-icon>
+                                                        <div class="ml-1.5 text-md ">{{scheduleItem.location}}</div>
+                                                    </div>
+                                                </ng-container>
+                                            </div>
                                         </div>
-                                    </ng-container>
+
+                                    </div>
                                 </div>
+
+
                             </div>
-                            <button mat-icon-button>
-                                <mat-icon [svgIcon]="'heroicons_solid:chevron-right'"></mat-icon>
-                            </button>
                         </div>
                     </ng-container>
                 </div>
@@ -443,17 +465,17 @@
                                 <div class="flex justify-between">
                                     <div class="text-2xl font-medium ">Bills</div>
                                     <div class="text-sm mt-2 font-medium ">{{finance.budget.bills | currency:'USD'}}/$20000</div>
-                                  </div>
-                                    <mat-progress-bar class="mt-3 rounded-full" [mode]="'determinate'" [value]="(finance.budget.bills  * 100) / finance.budget.billsLimit"></mat-progress-bar>
                                 </div>
-
+                                <mat-progress-bar class="mt-3 rounded-full" [mode]="'determinate'" [value]="(finance.budget.bills  * 100) / finance.budget.billsLimit"></mat-progress-bar>
                             </div>
+
                         </div>
                     </div>
                 </div>
-                <!-- end Budget to Goals-->
             </div>
-
+            <!-- end Budget to Goals-->
         </div>
 
     </div>
+
+</div>
