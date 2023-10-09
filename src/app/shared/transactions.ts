@@ -6,22 +6,22 @@ export const transaction = {
     schedule          : {
         today   : [
             {
-                title   : 'Group Meeting',
+                title   : 'Alex',
                 time    : 'in 32 minutes',
                 location: 'Conference room 1B'
             },
             {
-                title   : 'Dinner with David',
+                title   : 'Uber',
                 time    : '05:30 PM',
                 location: 'Magnolia'
             },
             {
-                title   : 'Jane\'s Birthday Party',
+                title   : 'Metro',
                 time    : '07:30 PM',
                 location: 'Home'
             },
             {
-                title   : 'Overseer\'s Retirement Party',
+                title   : 'CashBack',
                 time    : '09:30 PM',
                 location: 'Overseer\'s room'
             }

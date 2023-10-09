@@ -979,11 +979,11 @@ export const finance = {
         ]
     },
     budget            : {
-        expenses     : 11763.34,
+        expenses     : 11763,
         expensesLimit: 20000,
-        savings      : 10974.12,
+        savings      : 10974,
         savingsGoal  : 250000,
-        bills        : 1789.22,
+        bills        : 1789,
         billsLimit   : 1000
     },
     previousStatement : {
