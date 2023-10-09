@@ -7,17 +7,17 @@
     </div>
 
     <ul class="menu-list">
-      <li [routerLinkActive]="['active']" class="menu-item">
+      <li routerLink="/dashboard" [routerLinkActive]="['active']" class="menu-item">
         <mat-icon svgIcon="squares-2x2"></mat-icon>
         <a routerLink="/dashboard">DashBoard</a>
       </li>
 
-      <li [routerLinkActive]="['active']" class="menu-item">
+      <li routerLink="/wallet" [routerLinkActive]="['active']" class="menu-item">
         <mat-icon svgIcon="wallet"></mat-icon>
         <a routerLink="/wallet">Wallet</a>
       </li>
 
-      <li [routerLinkActive]="['active']" class="menu-item items-center">
+      <li routerLink="/transaction" [routerLinkActive]="['active']" class="menu-item items-center">
         <mat-icon svgIcon="arrows-right-left"></mat-icon>
         <a routerLink="/transaction">Transaction</a>
 
@@ -26,47 +26,47 @@
         </div>
       </li>
 
-      <li [routerLinkActive]="['active']" class="menu-item items-center">
+      <li routerLink="/cashback" [routerLinkActive]="['active']" class="menu-item items-center">
         <mat-icon svgIcon="circle-stack"></mat-icon>
-        <a routerLink="/cashback">Cashback</a>
+        <a >Cashback</a>
 
         <div class="flex items-center ml-auto mr-5 ">
           <div class=" bg-gray-600 text-white rounded-full p-1"> 27 </div>
         </div>
       </li>
 
-      <li [routerLinkActive]="['active']" class="menu-item">
+      <li routerLink="/payments" [routerLinkActive]="['active']" class="menu-item">
         <mat-icon svgIcon="currency-dollar"></mat-icon>
-        <a routerLink="/payments">Payments</a>
+        <a >Payments</a>
       </li>
 
-      <li [routerLinkActive]="['active']" class="menu-item">
+      <li routerLink="/investments" [routerLinkActive]="['active']" class="menu-item">
         <mat-icon svgIcon="arrow-trending-up"></mat-icon>
-        <a routerLink="/investments">Investments</a>
+        <a >Investments</a>
       </li>
 
-      <li [routerLinkActive]="['active']" class="menu-item">
+      <li routerLink="/profile" [routerLinkActive]="['active']" class="menu-item">
         <mat-icon svgIcon="user"></mat-icon>
-        <a routerLink="/profile">Profile</a>
+        <a >Profile</a>
       </li>
 
-      <li [routerLinkActive]="['active']" class="menu-item">
+      <li routerLink="/support" [routerLinkActive]="['active']" class="menu-item">
         <mat-icon svgIcon="chat-bubble-oval-left"></mat-icon>
-        <a routerLink="/support">Support</a>
+        <a >Support</a>
       </li>
 
     </ul>
 
     <mat-divider></mat-divider>
 
-    <li [routerLinkActive]="['active']" class="menu-item">
+    <li routerLink="/setting" [routerLinkActive]="['active']" class="menu-item">
       <mat-icon svgIcon="cog"></mat-icon>
-      <a routerLink="/setting">Setting</a>
+      <a >Setting</a>
     </li>
 
-    <li [routerLinkActive]="['active']" class="menu-item">
+    <li routerLink="/logout" [routerLinkActive]="['active']" class="menu-item">
       <mat-icon svgIcon="arrow-right-on-rectangle"></mat-icon>
-      <a routerLink="/logout">Logout</a>
+      <a >Logout</a>
     </li>
 
     <mat-slide-toggle [(ngModel)]="isChecked">
