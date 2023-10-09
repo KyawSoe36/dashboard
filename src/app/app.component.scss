@@ -4,7 +4,7 @@ $side_nav_background:#2c2351;
 $font-size: 16px;
 
 .mat-sidenav-container {  
-  height: calc(100vh);
+  height:100%;
 }
 
 .mat-sidenav {
@@ -37,9 +37,8 @@ $font-size: 16px;
 
   mat-slide-toggle {   
     margin-left:20px;
-    position: absolute;
     display: flex;
-    bottom: 50px;
+    margin-top: 50px;
   }
 
 }

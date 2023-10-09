@@ -429,7 +429,7 @@
                             </div>
                             <div class="flex-auto flex-col justify-center ml-4 leading-none">
                                 <div class="flex justify-between">
-                                    <div class="text-2xl font-medium">Expenses</div>
+                                    <div class=" font-medium">Expenses</div>
                                     <div class="text-sm mt-2 font-medium ">{{finance.budget.expenses | currency:'USD'}}/$20000</div>
                                 </div>
                                 <mat-progress-bar class="mt-3 rounded-full" [color]="'warn'" [mode]="'determinate'" [value]="(finance.budget.expenses  * 100) / finance.budget.expensesLimit"></mat-progress-bar>
@@ -446,7 +446,7 @@
                             </div>
                             <div class="flex-auto ml-4 leading-none">
                                 <div class="flex justify-between">
-                                    <div class="text-2xl font-medium">Savings</div>
+                                    <div class="font-medium">Savings</div>
                                     <div class="text-sm mt-2 font-medium ">{{finance.budget.savings | currency:'USD'}}/$20000</div>
                                 </div>
                                 <mat-progress-bar class="mt-3 rounded-full" [mode]="'determinate'" [value]="(finance.budget.savings  * 100) / finance.budget.savingsGoal"></mat-progress-bar>
@@ -463,7 +463,7 @@
                             </div>
                             <div class="flex-auto ml-4 leading-none">
                                 <div class="flex justify-between">
-                                    <div class="text-2xl font-medium ">Bills</div>
+                                    <div class="font-medium ">Bills</div>
                                     <div class="text-sm mt-2 font-medium ">{{finance.budget.bills | currency:'USD'}}/$20000</div>
                                 </div>
                                 <mat-progress-bar class="mt-3 rounded-full" [mode]="'determinate'" [value]="(finance.budget.bills  * 100) / finance.budget.billsLimit"></mat-progress-bar>
