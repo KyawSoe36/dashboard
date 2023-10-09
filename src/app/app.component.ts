@@ -6,7 +6,8 @@ import { NavigationEnd, Router } from '@angular/router';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 import { MatIconRegistry } from "@angular/material/icon";
 import { DomSanitizer } from "@angular/platform-browser";
-
+import { ThemeService } from './service/theme.service';
+import { MatSlideToggleChange } from '@angular/material/slide-toggle';
 
 @UntilDestroy()
 @Component({
@@ -20,11 +21,23 @@ export class AppComponent {
 
   isChecked = false;
 
+  
+
+  getCurrentTheme(): string {
+    return this.themeService.getCurrentTheme();
+  }
+
+  toggleTheme():void{
+     this.themeService.toggleTheme();
+  }
 
   constructor(private observer: BreakpointObserver, private router: Router,
     private matIconRegistry: MatIconRegistry,
-    private domSanitizer: DomSanitizer
+    private domSanitizer: DomSanitizer,
+    private themeService: ThemeService
   ) {
+    
+
     this.matIconRegistry.addSvgIcon(
       "arrow-down-right",
       this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/arrow-down-right.svg")
@@ -72,6 +85,7 @@ export class AppComponent {
     
 
   }
+
 
   ngAfterViewInit() {
     this.observer

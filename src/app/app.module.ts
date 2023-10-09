@@ -21,7 +21,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-
+import { ThemeService } from './service/theme.service';
 
 
 @NgModule({
@@ -48,7 +48,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatButtonToggleModule
 
   ],
-  providers: [],
+  providers: [ThemeService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

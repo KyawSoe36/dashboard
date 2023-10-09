@@ -1,5 +1,5 @@
-<mat-sidenav-container>
-  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+<mat-sidenav-container >
+  <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8" [ngClass]="getCurrentTheme() == 'light' ? 'light-bg-side-nav' : 'dark-bg-side-nav'">
 
     <div class="sidenav_header">
       <span class="logo">W</span>
@@ -69,13 +69,13 @@
       <a >Logout</a>
     </li>
 
-    <mat-slide-toggle [(ngModel)]="isChecked">
-      <span class="white-text">switch to light</span>
+    <mat-slide-toggle [(ngModel)]="isChecked" (change)="toggleTheme()">
+      <span>switch to light</span>
     </mat-slide-toggle>
 
   </mat-sidenav>
 
-  <div class="main-content">
+  <div class="main-content" [ngClass]="getCurrentTheme() == 'light' ? 'light-bg-main-content' : 'dark-bg-main-content'">
     <router-outlet></router-outlet>
   </div>
 </mat-sidenav-container>

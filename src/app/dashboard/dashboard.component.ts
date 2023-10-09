@@ -18,6 +18,7 @@ import {
   ApexTooltip,
   ApexStroke
 } from "ng-apexcharts";
+import { ThemeService } from '../service/theme.service';
 
 export type ChartOptions = {
   series: ApexAxisChartSeries;
@@ -52,7 +53,7 @@ export class DashboardComponent implements OnInit {
 
   // ::TODO finance value for the bugetGraph data
 
-  constructor(private dataService: DataService) {
+  constructor(private dataService: DataService,private themeService:ThemeService) {
     this.employees = [];
     this.mockApiData = [];
     this.analyticsData = Analytics;
@@ -61,11 +62,6 @@ export class DashboardComponent implements OnInit {
     this.investment = investmentConst;
     this.transaction = transaction;
     this.quickTransfers = quickTransfers;
-
-    console.log("Investment value", this.investment);
-
-
-
 
     this.lineChartOptions = {
       series: [
@@ -255,9 +251,14 @@ export class DashboardComponent implements OnInit {
         show: false,
       },
     };
+  }
 
+  getCurrentTheme(): string {
+    return this.themeService.getCurrentTheme();
+  }
 
-    console.log("Get call from the service", this.analyticsData);
+  toggleTheme():void{
+     this.themeService.toggleTheme();
   }
 
   trackByFn(index: number, item: any): any {
@@ -266,7 +267,6 @@ export class DashboardComponent implements OnInit {
   
   getAvatarText(user :any) {
     if(!user) return '?';
-    console.log("Get avalater tesst",user.charAt(0));
     return user.charAt(0) ;
   }
 
