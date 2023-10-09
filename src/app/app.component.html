@@ -69,8 +69,8 @@
       <a >Logout</a>
     </li>
 
-    <mat-slide-toggle [(ngModel)]="isChecked" (change)="toggleTheme()">
-      <span>switch to light</span>
+    <mat-slide-toggle [(ngModel)]="isChecked" (change)="toggleTheme()" >
+      <span [ngClass]="getCurrentTheme() == 'light' ? 'light-bg-side-nav' : 'dark-bg-side-nav'">switch to light</span>
     </mat-slide-toggle>
 
   </mat-sidenav>
