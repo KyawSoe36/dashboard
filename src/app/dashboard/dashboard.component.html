@@ -5,7 +5,7 @@
             <h1 class="mb-2 text-left">DashBoard</h1>
         </div>
 
-        <div class="search-container-group flex flex-col items-center lg:flex-row sm:justify-center xs:w-full" >
+        <div class="search-container-group flex flex-col items-center lg:flex-row sm:justify-center xs:w-full">
             <div class="search-container mb-2 lg:mb-0   py-3 px-3 pr-5" [ngClass]="getCurrentTheme() == 'light' ? 'light-bg-card-item' : 'dark-bg-card-item'">
                 <input type="search" id="searchInput1" name="searchInput1" placeholder="Search...">
                 <mat-icon svgIcon="magnifying-glass" class="right-icon"></mat-icon>
@@ -39,14 +39,14 @@
                         </mat-menu>
                     </div>
                 </div>
-                <div class="flex flex-col lg:flex-row lg:items-center mx-6 mt-3">
+                <div class="flex flex-col lg:items-start mx-6">
                     <div class="text-lg font-bold tracking-tighter leading-tight">${{data.conversions.amount | number:'1.0-0'}}
                         <span class="text-sm">.47</span>
                     </div>
-                    <div class="flex lg:flex-col lg:ml-3">
-                        <mat-icon class="icon-size-5 text-red-500" [svgIcon]="'heroicons_solid:trending-down'"></mat-icon>
+                    <div class="flex flex-row mt-5">
+                        <mat-icon class="icon-size-5 text-blue-500" svgIcon="arrow-up-right"></mat-icon>
                         <div class="flex items-center ml-1 lg:ml-0 lg:mt-0.5 text-md leading-none whitespace-nowrap text-secondary">
-                            <span class="font-medium text-red-500">2%</span>
+                            <span class="font-medium text-blue-500">2%</span>
                         </div>
                     </div>
                 </div>
@@ -75,12 +75,12 @@
                         </mat-menu>
                     </div>
                 </div>
-                <div class="flex flex-col lg:flex-row lg:items-center mx-6 mt-3">
+                <div class="flex flex-col lg:items-start mx-6">
                     <div class="text-lg font-bold tracking-tighter leading-tight">{{data.conversions.amount | number:'1.0-0'}}
                         <span class="text-sm">.47</span>
                     </div>
-                    <div class="flex lg:flex-col lg:ml-3">
-                        <mat-icon class="icon-size-5 text-red-500" [svgIcon]="'heroicons_solid:trending-down'"></mat-icon>
+                    <div class="flex flex-row mt-5">
+                        <mat-icon class="icon-size-5 " svgIcon="arrow-down-right"></mat-icon>
                         <div class="flex items-center ml-1 lg:ml-0 lg:mt-0.5 text-md leading-none whitespace-nowrap text-secondary">
                             <span class="font-medium text-red-500">2%</span>
                         </div>
@@ -111,16 +111,16 @@
                         </mat-menu>
                     </div>
                 </div>
-                <div class="flex flex-col lg:flex-row lg:items-center mx-6 mt-3">
+                <div class="flex flex-col lg:items-start mx-6">
                     <div class="text-lg font-bold tracking-tighter leading-tight">${{data.conversions.amount | number:'1.0-0'}}
                         <span class="text-sm">.47</span>
                     </div>
-                    <div class="flex lg:flex-col lg:ml-3">
-                        <mat-icon class="icon-size-5 text-red-500" [svgIcon]="'heroicons_solid:trending-down'"></mat-icon>
-                        <div class="flex items-center ml-1 lg:ml-0 lg:mt-0.5 text-md leading-none whitespace-nowrap text-secondary">
-                            <span class="font-medium text-red-500">2%</span>
+                    <div class="flex flex-row mt-5">
+                            <mat-icon class="icon-size-5 " svgIcon="arrow-up-right"></mat-icon>
+                            <div class="flex items-center ml-1 lg:ml-0 lg:mt-0.5 text-md leading-none whitespace-nowrap text-secondary">
+                                <span class="font-medium text-blue-500">2%</span>
+                            </div>
                         </div>
-                    </div>
                 </div>
                 <div class="flex flex-col flex-auto">
                     <apx-chart class="flex-auto w-full h-full" [chart]="chartConversions.chart" [colors]="chartConversions.colors" [series]="chartConversions.series"
@@ -145,12 +145,10 @@
 
 
                 </div>
-                <div class="flex-shrink-0"> <!-- Fixed at the top, won't grow in height -->
-                    <img
-                      class="w-full max-h-40 object-cover"
-                      src="assets/images/visa_card.png"
-                      alt="Card cover image">
-                  </div>
+                <div class="flex-shrink-0">
+                    <!-- Fixed at the top, won't grow in height -->
+                    <img class="w-full max-h-40 object-cover" src="assets/images/visa_card.png" alt="Card cover image">
+                </div>
             </div>
 
         </div>
@@ -211,7 +209,7 @@
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">
                         <span class="opacity-50">add</span>
                         <button mat-icon-button>
-                            <mat-icon svgIcon="plus" class=" icon-size-5 text-hint"></mat-icon>
+                            <mat-icon svgIcon="" class=" icon-size-5 text-hint"></mat-icon>
                         </button>
                     </div>
 
@@ -235,7 +233,7 @@
                             </div>
                             <div class="flex items-center justify-end flex-grow">
                                 <button mat-icon-button>
-                                    <mat-icon svgIcon="chevron-right" class="icon-size-5 text-hint"></mat-icon>
+                                    <mat-icon svgIcon="" class="icon-size-5 text-hint"></mat-icon>
 
                                 </button>
                             </div>
@@ -264,14 +262,6 @@
                             <button mat-menu-item>3 months</button>
                             <button mat-menu-item>9 months</button>
                         </mat-menu>
-                    </div>
-                </div>
-                <div class="flex flex-col lg:flex-row lg:items-center mx-6 mt-3">
-                    <div class="flex lg:flex-col lg:ml-3">
-                        <mat-icon class="icon-size-5 text-red-500" [svgIcon]="'heroicons_solid:trending-down'"></mat-icon>
-                        <div class="flex items-center ml-1 lg:ml-0 lg:mt-0.5 text-md leading-none whitespace-nowrap text-secondary">
-                            <span class="font-medium text-red-500">2%</span>
-                        </div>
                     </div>
                 </div>
                 <div class="flex flex-col flex-auto w-full p-100">
@@ -365,7 +355,7 @@
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">
                         <button class="opacity-50">
                             add goal
-                            <mat-icon class="mt-3" svgIcon="arrow-down-right" class=""></mat-icon>
+                            <mat-icon class="mt-3" svgIcon="" class=""></mat-icon>
                         </button>
 
                     </div>

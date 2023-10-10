@@ -45,6 +45,10 @@ export class AppComponent {
       this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/arrow-down-right.svg")
     );
     this.matIconRegistry.addSvgIcon(
+      "arrow-up-right",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/arrow-up-right.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
       "squares-2x2",
       this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/squares-2x2.svg")
     );
@@ -104,6 +108,8 @@ export class AppComponent {
       "bars-3",
       this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/bars-3.svg")
     );
+    
+  
     
     
   }
