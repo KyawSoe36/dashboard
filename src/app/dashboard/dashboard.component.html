@@ -30,7 +30,7 @@
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">Income</div>
                     <div class="ml-2">
                         <button class="h-6 min-h-6 px-2 rounded-full bg-hover" mat-button [matMenuTriggerFor]="conversionMenu">
-                            <span class="font-medium text-sm text-secondary">30 days</span>
+                            <span class="opacity-50 text-sm text-secondary">This month</span>
                         </button>
                         <mat-menu #conversionMenu="matMenu">
                             <button mat-menu-item>30 days</button>
@@ -66,7 +66,7 @@
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">Expenses</div>
                     <div class="ml-2">
                         <button class="h-6 min-h-6 px-2 rounded-full bg-hover" mat-button [matMenuTriggerFor]="conversionMenu">
-                            <span class="font-medium text-sm text-secondary">30 days</span>
+                            <span class="opacity-50 text-sm text-secondary">This month</span>
                         </button>
                         <mat-menu #conversionMenu="matMenu">
                             <button mat-menu-item>30 days</button>
@@ -102,7 +102,7 @@
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">Investment</div>
                     <div class="ml-2">
                         <button class="h-6 min-h-6 px-2 rounded-full bg-hover" mat-button [matMenuTriggerFor]="conversionMenu">
-                            <span class="font-medium text-sm text-secondary">30 days</span>
+                            <span class="opacity-50 text-sm text-secondary">This month</span>
                         </button>
                         <mat-menu #conversionMenu="matMenu">
                             <button mat-menu-item>30 days</button>
@@ -136,33 +136,21 @@
 
             <div class="flex flex-col flex-auto bg-card shadow rounded-2xl overflow-hidden" [ngClass]="getCurrentTheme() == 'light' ? 'light-bg-card-item' : 'dark-bg-card-item'">
                 <div class="flex items-start justify-between m-6 mb-0">
-                    <div class="text-lg font-medium tracking-tight leading-6 truncate">Investment</div>
+                    <div class="text-lg font-medium tracking-tight leading-6 truncate">My cards</div>
                     <div class="ml-2">
                         <button class="h-6 min-h-6 px-2 rounded-full bg-hover" mat-button [matMenuTriggerFor]="conversionMenu">
-                            <span class="font-medium text-sm text-secondary">30 days</span>
+                            <span class="opacity-50 text-sm text-secondary">add card</span>
                         </button>
-                        <mat-menu #conversionMenu="matMenu">
-                            <button mat-menu-item>30 days</button>
-                            <button mat-menu-item>3 months</button>
-                            <button mat-menu-item>9 months</button>
-                        </mat-menu>
                     </div>
+
+
                 </div>
-                <div class="flex flex-col lg:flex-row lg:items-center mx-6 mt-3">
-                    <div class="text-lg font-bold tracking-tighter leading-tight">{{data.conversions.amount | number:'1.0-0'}}</div>
-                    <div class="flex lg:flex-col lg:ml-3">
-                        <mat-icon class="icon-size-5 text-red-500" [svgIcon]="'heroicons_solid:trending-down'"></mat-icon>
-                        <div class="flex items-center ml-1 lg:ml-0 lg:mt-0.5 text-md leading-none whitespace-nowrap text-secondary">
-                            <span class="font-medium text-red-500">2%</span>
-                            <span class="ml-1">below target</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col flex-auto">
-                    <apx-chart class="flex-auto w-full h-full" [chart]="chartConversions.chart" [colors]="chartConversions.colors" [series]="chartConversions.series"
-                        [stroke]="chartConversions.stroke" [tooltip]="chartConversions.tooltip" [xaxis]="chartConversions.xaxis"
-                        [yaxis]="chartConversions.yaxis"></apx-chart>
-                </div>
+                <div class="flex-shrink-0"> <!-- Fixed at the top, won't grow in height -->
+                    <img
+                      class="w-full max-h-40 object-cover"
+                      src="assets/images/visa_card.png"
+                      alt="Card cover image">
+                  </div>
             </div>
 
         </div>
@@ -197,7 +185,7 @@
                     <div class="text-lg font-medium tracking-tight leading-6 truncate">Financial Analysis</div>
                     <div class="ml-2">
                         <button class="h-6 min-h-6 px-2 rounded-full bg-hover" mat-button [matMenuTriggerFor]="conversionMenu">
-                            <span class="font-medium text-sm text-secondary">30 days</span>
+                            <span class="opacity-50 text-sm text-secondary">This month</span>
                         </button>
                         <mat-menu #conversionMenu="matMenu">
                             <button mat-menu-item>30 days</button>
