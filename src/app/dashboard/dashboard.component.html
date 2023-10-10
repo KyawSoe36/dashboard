@@ -5,17 +5,17 @@
             <h1 class="mb-2 text-left">DashBoard</h1>
         </div>
 
-        <div class="search-container-group flex flex-col items-center lg:flex-row sm:justify-center xs:w-full">
-            <div class="search-container mb-2 lg:mb-0">
-                <input type="search" id="searchInput1" name="searchInput1" placeholder="Search..." >
-                <mat-icon svgIcon="arrow-down-right" class="right-icon"></mat-icon>
+        <div class="search-container-group flex flex-col items-center lg:flex-row sm:justify-center xs:w-full" >
+            <div class="search-container mb-2 lg:mb-0   py-3 px-3 pr-5" [ngClass]="getCurrentTheme() == 'light' ? 'light-bg-card-item' : 'dark-bg-card-item'">
+                <input type="search" id="searchInput1" name="searchInput1" placeholder="Search...">
+                <mat-icon svgIcon="magnifying-glass" class="right-icon"></mat-icon>
             </div>
 
-            <div class="search-container min-w-18 md:ml-4 w-full md:w-auto">
-                <mat-icon svgIcon="arrow-down-right" class="left-icon"></mat-icon>
+            <div class="search-container min-w-18 mb-2 w-full md:w-auto  py-3 px-3 pr-5 " [ngClass]="getCurrentTheme() == 'light' ? 'light-bg-card-item' : 'dark-bg-card-item'">
+                <mat-icon svgIcon="business-woman" class="left-icon transform scale-110"></mat-icon>
                 <input type="search" id="searchInput2" name="searchInput2" placeholder="Search...">
-                <mat-icon svgIcon="arrow-down-right" class="right-left-icon"></mat-icon>
-                <mat-icon class="right-icon">notifications</mat-icon>
+                <mat-icon svgIcon="envelope" class="right-left-icon"></mat-icon>
+                <mat-icon class="right-icon" matBadge="5" matBadgePosition="above">notifications</mat-icon>
             </div>
         </div>
     </div>
@@ -312,14 +312,14 @@
                                         </div>
                                     </div>
 
-                            
-                                        <div class="ml-2 flex flex-col justify-center">
-                                            <div class="font-medium">{{scheduleItem.title}}</div>
 
-                                            <div class="text-md text-secondary">{{scheduleItem.location}}</div>
+                                    <div class="ml-2 flex flex-col justify-center">
+                                        <div class="font-medium">{{scheduleItem.title}}</div>
 
-                                        </div>
-                                  
+                                        <div class="text-md text-secondary">{{scheduleItem.location}}</div>
+
+                                    </div>
+
 
                                 </div>
                             </div>
@@ -349,14 +349,14 @@
                                         </div>
                                     </div>
 
-                            
-                                        <div class="ml-2 flex flex-col justify-center">
-                                            <div class="font-medium">{{scheduleItem.title}}</div>
 
-                                            <div class="text-md text-secondary">{{scheduleItem.location}}</div>
+                                    <div class="ml-2 flex flex-col justify-center">
+                                        <div class="font-medium">{{scheduleItem.title}}</div>
 
-                                        </div>
-                                  
+                                        <div class="text-md text-secondary">{{scheduleItem.location}}</div>
+
+                                    </div>
+
 
                                 </div>
                             </div>
@@ -408,7 +408,7 @@
                                 </div>
                             </div>
                             <div class="flex-auto ml-4 leading-none">
-                                    <div class="flex sm:flex-col justify-between">
+                                <div class="flex sm:flex-col justify-between">
                                     <div class="font-medium">Savings</div>
                                     <div class="text-sm mt-2 font-medium ">{{finance.budget.savings | currency:'USD'}}/$20000</div>
                                 </div>
@@ -425,7 +425,7 @@
                                 </div>
                             </div>
                             <div class="flex-auto ml-4 leading-none">
-                                    <div class="flex sm:flex-col justify-between">
+                                <div class="flex sm:flex-col justify-between">
                                     <div class="font-medium ">Bills</div>
                                     <div class="text-sm mt-2 font-medium ">{{finance.budget.bills | currency:'USD'}}/$20000</div>
                                 </div>

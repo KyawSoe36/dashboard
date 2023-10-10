@@ -22,7 +22,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { ThemeService } from './service/theme.service';
-
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [AppComponent, DashboardComponent],
@@ -45,10 +45,11 @@ import { ThemeService } from './service/theme.service';
     MatTableModule,
     MatTooltipModule,
     MatProgressBarModule,
-    MatButtonToggleModule
+    MatButtonToggleModule,
+    MatBadgeModule
 
   ],
   providers: [ThemeService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

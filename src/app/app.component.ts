@@ -20,6 +20,8 @@ export class AppComponent {
   sidenav!: MatSidenav;
 
   isChecked = false;
+  isSidenavOpen = false;
+  isSmallScreen = false;
 
   
 
@@ -82,8 +84,28 @@ export class AppComponent {
       "arrow-right-on-rectangle",
       this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/arrow-right-on-rectangle.svg")
     );
+    this.matIconRegistry.addSvgIcon(
+      "magnifying-glass",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/magnifying-glass.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "magnifying-glass",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/magnifying-glass.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "business-woman",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/business-woman.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "envelope",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/envelope.svg")
+    );
+    this.matIconRegistry.addSvgIcon(
+      "bars-3",
+      this.domSanitizer.bypassSecurityTrustResourceUrl("../assets/icons/bars-3.svg")
+    );
     
-
+    
   }
 
 
@@ -95,7 +117,12 @@ export class AppComponent {
         if (res.matches) {
           this.sidenav.mode = 'over';
           this.sidenav.close();
+          this.isSmallScreen = res.matches;
+          this.isSidenavOpen = !res.matches;
+
         } else {
+          this.isSmallScreen = false;
+          this.isSidenavOpen = true;
           this.sidenav.mode = 'side';
           this.sidenav.open();
         }
@@ -111,5 +138,13 @@ export class AppComponent {
           this.sidenav.close();
         }
       });
+  }
+
+  toggleSidenav(sidenav: MatSidenav): void {
+    if (this.isSmallScreen) {
+      sidenav.toggle();
+    } else {
+      this.isSidenavOpen = !this.isSidenavOpen;
+    }
   }
 }
