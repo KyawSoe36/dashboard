@@ -51,9 +51,7 @@ export class DashboardComponent implements OnInit {
   transaction: any;
   quickTransfers: any;
 
-  // ::TODO finance value for the bugetGraph data
-
-  constructor(private dataService: DataService,private themeService:ThemeService) {
+  constructor(private dataService: DataService, private themeService: ThemeService) {
     this.employees = [];
     this.mockApiData = [];
     this.analyticsData = Analytics;
@@ -78,7 +76,7 @@ export class DashboardComponent implements OnInit {
         type: "bar",
       },
       toolbar: {
-        show: false, // Display the toolbar
+        show: false,
       },
       plotOptions: {
         bar: {
@@ -155,7 +153,7 @@ export class DashboardComponent implements OnInit {
           breakpoint: 480,
           options: {
             chart: {
-               width: "100%"
+              width: "100%"
             },
             legend: {
               position: "bottom"
@@ -223,11 +221,11 @@ export class DashboardComponent implements OnInit {
         },
 
         height: '100%',
-        width:'100%',
+        width: '100%',
         type: "area",
         toolbar: {
-          show: false, // Hide the entire toolbar
-          autoSelected: 'zoom' // Optional: Set the initial selected tool (e.g., 'zoom', 'pan', 'selection')
+          show: false, 
+          autoSelected: 'zoom'
         },
 
       },
@@ -257,17 +255,17 @@ export class DashboardComponent implements OnInit {
     return this.themeService.getCurrentTheme();
   }
 
-  toggleTheme():void{
-     this.themeService.toggleTheme();
+  toggleTheme(): void {
+    this.themeService.toggleTheme();
   }
 
   trackByFn(index: number, item: any): any {
     return item.id || index;
   }
-  
-  getAvatarText(user :any) {
-    if(!user) return '?';
-    return user.charAt(0) ;
+
+  getAvatarText(user: any) {
+    if (!user) return '?';
+    return user.charAt(0);
   }
 
   ngOnInit() {
@@ -277,17 +275,6 @@ export class DashboardComponent implements OnInit {
       console.log("Data from the employeeds", this.employees);
     });
 
-    this.dataService.getMockApiCallJsonFile().subscribe((data) => {
-      this.mockApiData = data;
-      console.log("Data from the employeeds", this.mockApiData);
-    });
-
-
   }
-
-
-
-
-
 
 }
